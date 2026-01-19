@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://by34li0jp1s78"]
+
+[ext_resource type="Script" uid="uid://c1lkeg80ptobq" path="res://scenes/lumin.gd" id="1_e4sja"]
+[ext_resource type="Texture2D" uid="uid://bct1bhheabgk0" path="res://dev assets/devlumin.PNG" id="1_j0fno"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4sja"]
+radius = 7.0
+height = 36.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_e4sja")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -22)
+zoom = Vector2(6, 6)
+
+[node name="Devlumin" type="Sprite2D" parent="."]
+position = Vector2(-2, -17)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_j0fno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -18)
+shape = SubResource("CapsuleShape2D_e4sja")
